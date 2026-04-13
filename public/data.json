@@ -8,7 +8,7 @@
     "status": "overdue",
     "tags": ["college", "close friend"],
     "bio": "Met during diploma studies. We often discuss tech trends and startups.",
-    "goal": 14,
+    "goal": 30,
     "next_due_date": "2026-04-05"
   },
   {
@@ -20,7 +20,7 @@
     "status": "almost due",
     "tags": ["school", "best friend"],
     "bio": "School friend. Loves photography and exploring new places.",
-    "goal": 14,
+    "goal": 30,
     "next_due_date": "2026-04-15"
   },
   {
@@ -32,7 +32,7 @@
     "status": "on-track",
     "tags": ["work", "developer"],
     "bio": "Internship colleague. We enjoy coding and building side projects.",
-    "goal": 14,
+    "goal": 30,
     "next_due_date": "2026-04-25"
   },
   {
@@ -44,7 +44,7 @@
     "status": "overdue",
     "tags": ["neighbor", "family friend"],
     "bio": "Neighbor since childhood. Very supportive and kind-hearted.",
-    "goal": 14,
+    "goal": 30,
     "next_due_date": "2026-04-03"
   },
   {
@@ -56,7 +56,7 @@
     "status": "almost due",
     "tags": ["gym", "fitness"],
     "bio": "Gym partner. Keeps me motivated to stay consistent.",
-    "goal": 14,
+    "goal": 30,
     "next_due_date": "2026-04-14"
   },
   {
@@ -68,7 +68,7 @@
     "status": "on-track",
     "tags": ["online", "design"],
     "bio": "Met in a UI/UX community. Very creative designer.",
-    "goal": 14,
+    "goal": 30,
     "next_due_date": "2026-04-28"
   },
   {
@@ -80,7 +80,7 @@
     "status": "overdue",
     "tags": ["university", "roommate"],
     "bio": "University roommate. Late-night gaming partner.",
-    "goal": 14,
+    "goal": 30,
     "next_due_date": "2026-04-06"
   },
   {
@@ -92,7 +92,7 @@
     "status": "on-track",
     "tags": ["project", "team"],
     "bio": "Worked together on a group project. Very responsible.",
-    "goal": 14,
+    "goal": 30,
     "next_due_date": "2026-04-22"
   },
   {
@@ -104,19 +104,7 @@
     "status": "almost due",
     "tags": ["freelance", "client"],
     "bio": "Worked together on freelance projects. Great communicator.",
-    "goal": 14,
+    "goal": 30,
     "next_due_date": "2026-04-13"
-  },
-  {
-    "id": 10,
-    "name": "Sabina Yasmin",
-    "picture": "https://randomuser.me/api/portraits/women/18.jpg",
-    "email": "sabina.yasmin@gmail.com",
-    "days_since_contact": 2,
-    "status": "on-track",
-    "tags": ["family", "cousin"],
-    "bio": "My cousin. We meet during family events and festivals.",
-    "goal": 14,
-    "next_due_date": "2026-04-30"
   }
 ]

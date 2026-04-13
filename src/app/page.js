@@ -1,7 +1,11 @@
+
 import Image from "next/image";
-import Banner from "./components/Banner/Banner";
-import Stat from "./components/Stat/Stat";
+import Banner from "../components/homepage/Banner";
+import Stat from "../components/homepage/Stat";
 import YourFriends from "./yourFriends/page";
+// import YourFriends from "../components/homepage/YourFriends";
+
+
 
 export default function Home() {
   return (
@@ -10,6 +14,7 @@ export default function Home() {
       <Banner></Banner>
       <Stat></Stat>
       <YourFriends></YourFriends>
+      
     </div>
     </>
   );
