@@ -1,7 +1,22 @@
 import Link from "next/link";
 import React from "react";
+import MyLink from "./MyLink";
 
 const Navbar = () => {
+  const navItems = [
+    {
+      path: "/",
+      text: "Home",
+    },
+    {
+      path: "/timeLinePage",
+      text: "Timeline",
+    },
+    {
+      path: "/stats",
+      text: "Stats",
+    },
+  ];
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -27,31 +42,23 @@ const Navbar = () => {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-            <Link href={'/'}><button>Home</button></Link>
-          </li>
-          <li>
-            <Link href={'/timeLinePage'}><button>TimeLine</button></Link>
-          </li>
-          <li>
-            <Link href={'/stats'}><button>Stats</button></Link>
-          </li>
+            {navItems.map((item, ind) => (
+              <MyLink href={item.path} key={ind}>
+                {item.text}
+              </MyLink>
+            ))}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">KeenKeeper</a>
+        <a className="btn btn-ghost text-4xl">Keen <span className=" text-green-900 ">Keeper</span></a>
       </div>
       <div className="navbar-center"></div>
       <div className="navbar-end  hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-4">
-          <li>
-            <Link href={'/'}><button>Home</button></Link>
-          </li>
-          <li>
-            <Link href={'/timeLinePage'}><button>TimeLine</button></Link>
-          </li>
-          <li>
-            <Link href={'/stats'}><button>Stats</button></Link>
-          </li>
+          {navItems.map((item, ind) => (
+            <MyLink href={item.path} key={ind}>
+              {item.text}
+            </MyLink>
+          ))}
         </ul>
       </div>
     </div>

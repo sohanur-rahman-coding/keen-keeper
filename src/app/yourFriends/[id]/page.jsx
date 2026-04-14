@@ -1,3 +1,8 @@
+
+// import Call from "@/components/communications/call";
+import Call from "@/components/communications/Call";
+import Text from "@/components/communications/Text";
+import VideoCalling from "@/components/communications/VideoCalling";
 import Image from "next/image";
 import React from "react";
 const promiseFriends = async () => {
@@ -9,7 +14,7 @@ const FriendDetails = async ({ params }) => {
   const { id } = await params;
   const friends = await promiseFriends();
   const details = friends.find((details) => details.id == id);
-  console.log(details, "details");
+  // console.log(details, "details");
   return (
     <div className="w-11/12 mx-auto justify-center flex gap-8">
       <div className="left my-12">
@@ -93,9 +98,9 @@ const FriendDetails = async ({ params }) => {
         <div  className="bg-white py-6 my-4 shadow px-6 rounded-2xl space-y-4 mx-auto ">
             <h2 className="text-2xl text-left">Quick Check-In</h2>
             <div className="flex gap-4 justify-center">
-                <button className="btn w-60 shadow h-26 text-2xl">Call</button>
-            <button className="btn w-60 shadow h-26 text-2xl">Text</button>
-            <button className="btn w-60 shadow h-26 text-2xl">Video</button>
+              <Call details={details}></Call>
+            <Text details={details}></Text>
+            <VideoCalling details={details}></VideoCalling>
             </div>
         </div>
       </div>
