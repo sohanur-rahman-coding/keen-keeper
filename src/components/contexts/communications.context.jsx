@@ -7,6 +7,7 @@ const CommunicationContextProvider = ({ children }) => {
   const [calling, setCalling] = useState([]);
   const [text, setText] = useState([]);
   const [videoCalling, setVideoCalling] = useState([]);
+  
   const data = {
     calling,
     setCalling,

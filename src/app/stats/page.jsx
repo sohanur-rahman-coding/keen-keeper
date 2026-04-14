@@ -12,21 +12,21 @@ const Stats = () => {
   console.log(callingLength, textLength, videoLength);
 
   const data = [
-    { name: "call", value: callingLength, fill: "#0088FE" },
-    { name: "text", value: textLength, fill: "#00C49F" },
-    { name: "video call", value: videoLength, fill: "#FFBB28" },
+    { name: "call", value: callingLength, fill: "#244D3F" },
+    { name: "text", value: textLength, fill: "#7F37F5" },
+    { name: "video call", value: videoLength, fill: "#37A163" },
   ];
   return (
     <div className="w-10/12 mx-auto">
       <h2 className="text-4xl font-bold my-8">Friendship Analytics</h2>
 
       <div className=" my-10 shadow p-8 w-11/12  rounded-md  container mx-auto">
-        <h2 className="font-semibold text-3xl mb-16">By Interaction Type</h2>
+       
         {callingLength == 0 && textLength == 0 && videoLength == 0 ? (
-          <h2 className="text-2xl font-bold text-center pb-10">No interactions logged yet.</h2>
+          <h2 className="text-2xl font-bold text-center  py-10">No interactions logged yet.</h2>
         ) : (
-          <div className=" my-6 shadow p-4 rounded-md container mx-auto">
-            <h2 className="font-semibold text-3xl mb-8 text-center">
+          <div className=" my-2 mx-auto">
+            <h2 className="font-semibold text-3xl mb-8 text-left">
               By Interaction Type
             </h2>
             <PieChart
