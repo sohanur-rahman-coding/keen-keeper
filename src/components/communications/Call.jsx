@@ -4,8 +4,8 @@ import { useContext } from "react";
 import { communicationContext } from "../contexts/communications.context";
 
 const Call = ({ details }) => {
-  const {calling , setCalling} = useContext(communicationContext)
-  
+  const { calling, setCalling } = useContext(communicationContext);
+
   // console.log(calling , setCalling);
   const handleCall = () => {
     setCalling([...calling, details]);
