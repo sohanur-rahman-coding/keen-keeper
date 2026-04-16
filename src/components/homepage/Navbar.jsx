@@ -10,18 +10,17 @@ const Navbar = () => {
     {
       path: "/",
       text: `Home`,
-      icon : <IoHomeOutline></IoHomeOutline>
+      icon: <IoHomeOutline></IoHomeOutline>,
     },
     {
       path: "/timeLinePage",
       text: "Timeline",
-      icon: <RiTimeLine />
+      icon: <RiTimeLine />,
     },
     {
       path: "/stats",
       text: "Stats",
-      icon:<ImStatsDots />
-
+      icon: <ImStatsDots />,
     },
   ];
   return (
@@ -56,16 +55,18 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <a className="btn btn-ghost text-4xl">Keen<span className=" text-green-900 ">Keeper</span></a>
+        <a className="btn btn-ghost text-4xl">
+          Keen<span className=" text-green-900 ">Keeper</span>
+        </a>
       </div>
       <div className="navbar-center"></div>
       <div className="navbar-end  hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-4">
           {navItems.map((item, ind) => (
-              <MyLink href={item.path} key={ind} icon={item.icon}>
-                {item.text}
-              </MyLink>
-            ))}
+            <MyLink href={item.path} key={ind} icon={item.icon}>
+              {item.text}
+            </MyLink>
+          ))}
         </ul>
       </div>
     </div>

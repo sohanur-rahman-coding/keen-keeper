@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🤝 Keen Keeper
 
-## Getting Started
+A responsive Friend Tracker app to manage friendships and track interactions like calls, texts, and video chats.
 
-First, run the development server:
+---
+
+## 🌐 Live Demo
+https://keen-keeper-steel.vercel.app/
+
+---
+
+## 📌 About
+This app helps users:
+- Track friends and last contact
+- Log interactions (Call / Text / Video)
+- View timeline history
+- See communication analytics
+
+---
+
+## ⚙️ Tech Stack
+- React / Next.js
+- Tailwind CSS
+- Recharts
+- React Toastify
+- JSON Data
+
+---
+
+## ✨ Features
+- Friend list from JSON data
+- Friend details page with actions
+- Timeline system with filters
+- Analytics pie chart (Recharts)
+- Fully responsive design (mobile/tablet/desktop)
+- Toast notifications on actions
+- Loading spinner while fetching data
+- Custom 404 page
+- No reload errors on navigation
+
+---
+
+## 🚀 Setup & Run
 
 ```bash
+git clone https://github.com/your-username/repo-name
+cd repo-name
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

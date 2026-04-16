@@ -24,7 +24,7 @@ const Call = ({ details }) => {
   };
 
   return (
-    <button onClick={handleCall} className="btn w-60 shadow h-20 text-[18px] flex flex-col gap-0">
+    <button onClick={handleCall} className="btn w-full md:w-60 shadow h-20 text-[18px] flex flex-col gap-0">
       <MdAddCall />
       Call
     </button>

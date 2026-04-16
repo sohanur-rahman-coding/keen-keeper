@@ -14,7 +14,7 @@ const promiseFriends = async () => {
 const FriendsList = async () => {
   const friendData = await promiseFriends();
   return (
-    <div className="grid grid-cols-4 gap-4 mx-auto mb-16">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-auto mb-16">
       {friendData.map((friend) => (
         <FriendCard key={friend.id} friend={friend} />
       ))}
