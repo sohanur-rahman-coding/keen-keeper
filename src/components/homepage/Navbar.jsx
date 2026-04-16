@@ -1,20 +1,27 @@
 import Link from "next/link";
 import React from "react";
 import MyLink from "./MyLink";
+import { IoHomeOutline } from "react-icons/io5";
+import { RiTimeLine } from "react-icons/ri";
+import { ImStatsDots } from "react-icons/im";
 
 const Navbar = () => {
   const navItems = [
     {
       path: "/",
-      text: "Home",
+      text: `Home`,
+      icon : <IoHomeOutline></IoHomeOutline>
     },
     {
       path: "/timeLinePage",
       text: "Timeline",
+      icon: <RiTimeLine />
     },
     {
       path: "/stats",
       text: "Stats",
+      icon:<ImStatsDots />
+
     },
   ];
   return (
@@ -43,22 +50,22 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {navItems.map((item, ind) => (
-              <MyLink href={item.path} key={ind}>
+              <MyLink href={item.path} key={ind} icon={item.icon}>
                 {item.text}
               </MyLink>
             ))}
           </ul>
         </div>
-        <a className="btn btn-ghost text-4xl">Keen <span className=" text-green-900 ">Keeper</span></a>
+        <a className="btn btn-ghost text-4xl">Keen<span className=" text-green-900 ">Keeper</span></a>
       </div>
       <div className="navbar-center"></div>
       <div className="navbar-end  hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-4">
           {navItems.map((item, ind) => (
-            <MyLink href={item.path} key={ind}>
-              {item.text}
-            </MyLink>
-          ))}
+              <MyLink href={item.path} key={ind} icon={item.icon}>
+                {item.text}
+              </MyLink>
+            ))}
         </ul>
       </div>
     </div>

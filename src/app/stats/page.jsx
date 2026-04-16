@@ -1,59 +1,56 @@
 "use client";
+
 import React, { useContext } from "react";
-import { Legend, Pie, PieChart, Tooltip } from "recharts";
-import { RechartsDevtools } from "@recharts/devtools";
+import { PieChart, Pie, Tooltip, Legend, ResponsiveContainer } from "recharts";
+
 import { communicationContext } from "@/components/contexts/communications.context";
 
 const Stats = () => {
-  const { calling, text, videoCalling } = useContext(communicationContext);
-  const callingLength = calling.length;
-  const textLength = text.length;
-  const videoLength = videoCalling.length;
-  console.log(callingLength, textLength, videoLength);
+  const { timeline } = useContext(communicationContext);
+
+
+  const callingLength = timeline.filter((i) => i.type === "call").length;
+  const textLength = timeline.filter((i) => i.type === "text").length;
+  const videoLength = timeline.filter((i) => i.type === "video").length;
 
   const data = [
-    { name: "call", value: callingLength, fill: "#244D3F" },
-    { name: "text", value: textLength, fill: "#7F37F5" },
-    { name: "video call", value: videoLength, fill: "#37A163" },
+    { name: "Call", value: callingLength, fill: "#244D3F" },
+    { name: "Text", value: textLength, fill: "#7F37F5" },
+    { name: "Video Call", value: videoLength, fill: "#37A163" },
   ];
+
   return (
     <div className="w-10/12 mx-auto">
       <h2 className="text-4xl font-bold my-8">Friendship Analytics</h2>
 
-      <div className=" my-10 shadow p-8 w-11/12  rounded-md  container mx-auto">
-       
-        {callingLength == 0 && textLength == 0 && videoLength == 0 ? (
-          <h2 className="text-2xl font-bold text-center  py-10">No interactions logged yet.</h2>
+      <div className="my-10 shadow p-8 w-11/12 rounded-md container mx-auto">
+        {timeline.length === 0 ? (
+          <h2 className="text-2xl font-bold text-center py-10">
+            No interactions logged yet.
+          </h2>
         ) : (
-          <div className=" my-2 mx-auto">
+          <div className="mx-auto">
             <h2 className="font-semibold text-3xl mb-8 text-left">
               By Interaction Type
             </h2>
-            <PieChart
-              style={{
-                width: "100%",
-                maxWidth: "500px",
-                maxHeight: "80vh",
-                margin: "auto",
-                aspectRatio: 1,
-              }}
-              responsive
-            >
-              <Pie
-                data={data}
-                innerRadius="80%"
-                outerRadius="100%"
-                // Corner radius is the rounded edge of each pie slice
-                cornerRadius="50%"
-                fill="#8884d8"
-                // padding angle is the gap between each pie slice
-                paddingAngle={5}
-                dataKey="value"
-                isAnimationActive={true}
-              />
-              <Legend />
-              <Tooltip />
-            </PieChart>
+
+            
+            <ResponsiveContainer width="100%" height={300}>
+              <PieChart>
+                <Pie
+                  data={data}
+                  dataKey="value"
+                  nameKey="name"
+                  innerRadius="60%"
+                  outerRadius="90%"
+                  paddingAngle={5}
+                  cornerRadius={10}
+                  isAnimationActive={true}
+                />
+                <Tooltip />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
           </div>
         )}
       </div>

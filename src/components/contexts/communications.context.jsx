@@ -1,23 +1,25 @@
 "use client";
-import {  createContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const communicationContext = createContext();
 
 const CommunicationContextProvider = ({ children }) => {
-  const [calling, setCalling] = useState([]);
-  const [text, setText] = useState([]);
-  const [videoCalling, setVideoCalling] = useState([]);
-  
-  const data = {
-    calling,
-    setCalling,
-    text,
-    setText,
-    videoCalling,
-    setVideoCalling
+  const [timeline, setTimeline] = useState([]);
+
+  // ✅ EASY add function
+  const add = (type, name) => {
+    const newItem = {
+      id: Date.now(),
+      type,
+      name,
+      time: new Date(),
+    };
+
+    setTimeline([newItem, ...timeline]); // new first
   };
+
   return (
-    <communicationContext.Provider value={data}>
+    <communicationContext.Provider value={{ timeline, add }}>
       {children}
     </communicationContext.Provider>
   );

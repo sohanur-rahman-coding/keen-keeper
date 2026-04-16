@@ -9,15 +9,15 @@ const Stat = () => {
           <p className="text-[18px] ">Total Friends</p>
         </div>
         <div className="bg-white py-6 shadow px-10 rounded-2xl w-65">
-          <h2 className="text-2xl font-bold">3</h2>
+          <h2 className="text-2xl font-bold text-green-900">3</h2>
           <p className="text-[18px] ">On Track</p>
         </div>
         <div className="bg-white py-6 shadow px-10 rounded-2xl w-65">
-          <h2 className="text-2xl font-bold">6</h2>
+          <h2 className="text-2xl font-bold  text-green-900">6</h2>
           <p className="text-[18px] ">Need Attention</p>
         </div>
         <div className="bg-white py-6 shadow  rounded-2xl w-65">
-          <h2 className="text-2xl font-bold">12</h2>
+          <h2 className="text-2xl font-bold  text-green-900">12</h2>
           <p className="text-[18px] ">Interactions This Month</p>
         </div>
       </div>
