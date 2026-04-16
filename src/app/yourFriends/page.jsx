@@ -4,7 +4,7 @@ import Loading from "./loading";
 
 const promiseFriends = async () => {
  
-  const res = await fetch("http://localhost:3000/data.json", {
+  const res = await fetch("https://keen-keeper-steel.vercel.app/data.json", {
     cache: "no-store",
   });
   const data = await res.json();
