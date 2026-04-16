@@ -6,7 +6,7 @@ import VideoCalling from "@/components/communications/VideoCalling";
 import Image from "next/image";
 import React from "react";
 const promiseFriends = async () => {
-  const res = await fetch("http://localhost:3000//data.json",{cache:'total'});
+  const res = await fetch("https://keen-keeper-steel.vercel.app/data.json");
   const data = await res.json();
   return data;
 };
